@@ -1,0 +1,18 @@
+{
+  "name": "GPX viewer",
+  "description": "Nice map for gpx tracks",
+  "version": "0.1",
+  "permissions": [
+    "declarativeContent",
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_icon": "images/icon.png",
+    "default_title": "gpx viewer"
+  },
+  "manifest_version": 2
+}
