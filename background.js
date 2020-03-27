@@ -15,7 +15,10 @@ chrome.runtime.onInstalled.addListener(function() {
 });
 
 const winspecs = 'width=1300,height=820,resizable=0,locationbar=0,top=100,left=100';
-const gpxviewerUrl = 'http://localhost:4200/gpx/activity_@id.gpx/blue';
+// const gpxviewerUrl = 'http://localhost:3016/gpx/activity_@id.gpx'; // nb dit geeft download vd gpx file!
+const gpxviewerUrl = 'http://viewer2/gpx/activity_@id.gpx';
+
+//http://viewer2/gpx/activity_4676092659.gpx
 
 function getIdFromGarminConnect(url) {
     const words = url.split('/');
