@@ -5,12 +5,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What this is
 
 A tiny Chrome extension (Manifest V3, `manifest.json` + `background.js` service worker, no build
-step) that links
-Garmin Connect activity pages to the local GPX viewer. It's the entry point of the "new activity"
-workflow described in `../node-gpx-server/CLAUDE.md` and `../node-gpx-server/README.md`: it's how
-you jump from a Garmin Connect activity page to previewing that track, before/after manually
-exporting the GPX/CSV into `node-gpx-server`'s `activitiesNewMap`
-(`~/Downloads/newactivities`) — the extension itself does not download or move any files.
+step) that links a Garmin Connect activity page to a local GPX viewer — nothing more. It opens
+`viewer2` (`ng9-gpx-client`, the older client), not `ng16-gpx-client`, and it only opens a preview
+window; it does not download, export, or move any files. **It is not the tool for supplying new
+activities** — that's a separate manual per-activity export step (gear-menu GPX export + a
+same-named Laps-CSV export) described in `../node-gpx-server/README.md` and
+`../node-gpx-server/CLAUDE.md`, unrelated to this extension.
 
 ## Loading/developing
 
